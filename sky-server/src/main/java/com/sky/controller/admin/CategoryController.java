@@ -40,4 +40,19 @@ public class CategoryController {
         return Result.success();
 
     }
+
+    @DeleteMapping
+    @ApiOperation("根据id删除分类")
+    public Result deleteById(@RequestParam Long id) {
+        categoryService.deleteById(id);
+        return Result.success();
+    }
+
+    @PutMapping
+    @ApiOperation("修改分类")
+    public Result update(@RequestBody CategoryDTO categoryDTO) {
+            categoryService.update(categoryDTO);
+            return Result.success();
+    }
+
 }
