@@ -1,0 +1,75 @@
+[33mcommit 97948afd958bd2f8eecff41fd314e74fedb32dc9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: zhuhan107 <88774733+ALTXXXXX@users.noreply.github.com>
+Date:   Thu Nov 28 20:36:26 2024 +0800
+
+    Update application-dev.yml
+
+[33mcommit 98ce2ab564e2a573033b1d6246082f3b0e67c3a2[m
+Merge: baa979f 1ac9bb3
+Author: ALTXXXXX <1078369700@qq.com>
+Date:   Thu Nov 28 20:09:31 2024 +0800
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       sky-server/src/main/resources/application-dev.yml
+
+[33mcommit baa979f5cc326742d684cb0f9823554837fdef45[m
+Author: ALTXXXXX <1078369700@qq.com>
+Date:   Thu Nov 28 16:01:54 2024 +0800
+
+    商品浏览业务功能代码开发
+
+[33mcommit 1ac9bb34774e702486286137681c35d830c21715[m
+Author: zhuhan107 <88774733+ALTXXXXX@users.noreply.github.com>
+Date:   Sat Nov 23 12:35:01 2024 +0800
+
+    Update application-dev.yml
+
+[33mcommit 847c2f9352ece3c2e1a8881b0131f84a987926d3[m
+Author: ALTXXXXX <1078369700@qq.com>
+Date:   Sat Nov 23 12:06:10 2024 +0800
+
+    修改菜品业务代码开发
+
+[33mcommit 89de38be9a9f4e3e7d565603c64c28015f67d8ee[m
+Author: ALTXXXXX <1078369700@qq.com>
+Date:   Thu Nov 21 20:00:34 2024 +0800
+
+    新增菜品业务代码开发
+
+[33mcommit faeca71ec2dc0a33e5a886aa1dc9730c650c223f[m
+Author: ALTXXXXX <1078369700@qq.com>
+Date:   Thu Nov 21 15:51:58 2024 +0800
+
+    公共字段自动填充代码实现
+
+[33mcommit 42a2e861ebd9743f2937e29e18452354eb101217[m
+Author: ALTXXXXX <1078369700@qq.com>
+Date:   Wed Nov 20 22:51:37 2024 +0800
+
+    编辑分类业务代码开发
+
+[33mcommit 844ad1b60c2bbe2fab048515370188b441257b9d[m
+Author: ALTXXXXX <1078369700@qq.com>
+Date:   Wed Nov 20 18:58:41 2024 +0800
+
+    编辑员工业务代码开发
+
+[33mcommit cc8039abb88eca2daf7fab831a2f2929cda687eb[m
+Author: ALTXXXXX <1078369700@qq.com>
+Date:   Wed Nov 20 17:55:26 2024 +0800
+
+    员工分页查询业务代码
+
+[33mcommit 46d80337a6521ba26527b0eeb5237ed9e543a5f1[m
+Author: ALTXXXXX <1078369700@qq.com>
+Date:   Wed Nov 20 15:40:53 2024 +0800
+
+    新增员工业务代码
+
+[33mcommit e5515696021fdd7a1e9c4b83ae7efe59aa0f533f[m
+Author: ALTXXXXX <1078369700@qq.com>
+Date:   Mon Nov 18 22:34:30 2024 +0800
+
+    苍穹外卖项目初始化代码
