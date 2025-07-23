@@ -13,8 +13,9 @@
                 and name like concat('%',#{name},'%')
             </if>
         </where>
-        order by sort desc
+        order by sort asc , create_time desc
     </select>
+
 
     <update id="update">
         update category
@@ -28,4 +29,13 @@
         </set>
         where id = #{id}
     </update>
+
+    <select id="queryByType" resultType="com.sky.entity.Category">
+        select * from category
+        where status = 1
+        <if test="type != null">
+            and type = #{type}
+        </if>
+        order by sort asc, create_time desc
+    </select>
 </mapper>
