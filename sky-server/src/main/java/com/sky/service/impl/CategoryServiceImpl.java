@@ -67,4 +67,11 @@ public class CategoryServiceImpl implements CategoryService {
         categoryMapper.update(category);
 
     }
+
+    @Override
+    public List<Category> queryByType(Integer type) {
+
+        List<Category> categories = categoryMapper.queryByType(type);
+        return categories;
+    }
 }
