@@ -10,4 +10,7 @@ public interface CategoryService {
 
     //分页查询
     PageResult pageQuery(CategoryPageQueryDTO categoryPageQueryDTO);
+
+    //启动，禁用分类状态
+    void startOrStop(Integer status, Long id);
 }

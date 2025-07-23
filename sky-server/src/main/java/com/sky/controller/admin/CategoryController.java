@@ -31,4 +31,13 @@ public class CategoryController {
        PageResult pageResult = categoryService.pageQuery(categoryPageQueryDTO);
             return Result.success(pageResult);
     }
+
+    @PostMapping("/status/{status}")
+    @ApiOperation("启用、禁用分类")
+    public Result startOrStop(@PathVariable("status") Integer status,Long id) {
+
+        categoryService.startOrStop(status,id);
+        return Result.success();
+
+    }
 }

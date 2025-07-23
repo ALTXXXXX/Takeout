@@ -3,7 +3,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.sky.mapper.CategoryMapper">
 
-
     <select id="pageQuery" resultType="com.sky.entity.Category">
         select * from category
         <where>
@@ -16,4 +15,17 @@
         </where>
         order by sort desc
     </select>
+
+    <update id="update">
+        update category
+        <set>
+            <if test="type !=null">type = #{type},</if>
+            <if test="name !=null">name = #{name},</if>
+            <if test="sort !=null">sort = #{sort},</if>
+            <if test="status !=null">status = #{status},</if>
+            <if test="updateTime !=null">update_time = #{updateTime},</if>
+            <if test="updateUser !=null">update_user = #{updateUser},</if>
+        </set>
+        where id = #{id}
+    </update>
 </mapper>

@@ -43,4 +43,13 @@ public class CategoryServiceImpl implements CategoryService {
         List<Category> records = page.getResult();
         return new PageResult(total, records);
     }
+
+    @Override
+    public void startOrStop(Integer status, Long id) {
+        Category category = Category.builder()
+                .status(status)
+                .id(id)
+                .build();
+        categoryMapper.update(category);
+    }
 }
