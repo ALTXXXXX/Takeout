@@ -7,6 +7,8 @@
         insert into dish (name, category_id, price, image, description, create_time, update_time, create_user, update_user,status)
         VALUES (#{name},#{categoryId},#{price},#{image},#{description},#{createTime},#{updateTime},#{createUser},#{updateUser},#{status});
     </insert>
+
+
     <select id="pageQuery" resultType="com.sky.vo.DishVO">
         select d.*,c.name as category_name from dish d left join category c
         on d.category_id = c.id
@@ -25,4 +27,38 @@
         order by d.create_time desc
 
     </select>
+
+    <delete id="deleteByIds">
+        delete from dish where id in
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+    <resultMap id="dishMapperMap" type="com.sky.vo.DishVO">
+        <id column="d.id" property="id"/>
+        <result column="d.name" property="name"/>
+        <collection property="flavors" ofType="DishFlavor">
+            <id column="df.id" property="id"/>
+            <result column="df.name" property="name"/>
+        </collection>
+    </resultMap>
+
+    <select id="queryWithFlavorsById" resultMap="dishMapperMap">
+        select * from dish d left join dish_flavor df on
+            d.id = df.dish_id where d.id = #{id}
+    </select>
+
+    <update id="update">
+        update dish
+        <set>
+            name = #{name},price = #{price},image = #{image},category_id = #{categoryId},
+            update_time = #{updateTime},update_user = #{updateUser},
+        <if test="status != null">status=#{status},</if>
+        <if test="description != null">description = #{description},</if>
+
+        </set>
+        where id = #{id}
+    </update>
+
 </mapper>
