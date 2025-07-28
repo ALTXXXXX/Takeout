@@ -1,5 +1,7 @@
 package com.sky.vo;
 
+import com.sky.dto.SetmealDTO;
+import com.sky.entity.Setmeal;
 import com.sky.entity.SetmealDish;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
