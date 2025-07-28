@@ -49,8 +49,6 @@
             d.id = df.dish_id where d.id = #{id}
     </select>
 
-
-
     <update id="update">
         update dish
         <set>
